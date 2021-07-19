@@ -1,0 +1,8 @@
+html,body{height:100%;}
+#particles{
+	height: 100%;
+	background-color: #9166F9;
+	background-image: url('https://preview.redd.it/zomea5tdv8651.jpg?auto=webp&s=0a20face47ba06072a6510c946c01b9c83c9b1d2');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
