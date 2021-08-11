@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>PARTICLE</title>
-  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
-  <meta name="author" content="Vincent Garreau" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" media="screen" href="css/styles.css">
+	<meta charset="utf-8">
+	<title>PARTICLE</title>
+	<meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+	<meta name="author" content="Vincent Garreau" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" media="screen" href="css/styles.css">
 </head>
 <body>
 	<div id="particles"></div>
+	<h1 id="txt" style="position: absolute; left:30%; top:30%;color: white;">KiKi, DO YOU LOVE ME??</h1>
+	<button id="yesBtn" class="btn btn-info" style="position: absolute; left:30%; top:50%;">YES, I DO</button>
+	<button id="noBtn" class="btn btn-warning" style="position: absolute; right:30%; top:50%;">NEVER</button>
 	<script src="js/particles.js"></script>
 	<script src="js/scripts.js"></script>
+	<script>
+		$("#noBtn").hover(function(){
+			$(this).css("left", Math.floor((Math.random() * 100))+"%");
+			$(this).css("top", Math.floor((Math.random() * 100))+"%");
+		});
+		$("#yesBtn").click(function(){
+			$("#yesBtn").css("display","none");
+			$("#noBtn").css("display","none");
+			$("#txt").html("YOU'RE SO SWEET! I'LL MARRY YOU! :D");
+		});
+	</script>
 </body>
 </html>
